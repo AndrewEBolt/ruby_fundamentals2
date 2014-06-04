@@ -7,7 +7,9 @@ students = {
 
 
 def display(hash)
-	hash.each {|cohort, number| puts "#{cohort}: #{number} students" }
+	hash.each do |cohort, number| 
+	puts "#{cohort}: #{number} students" 
+end
 end
 
 display(students)
@@ -19,12 +21,33 @@ students[:cohort4] = 43
 puts students.keys
 
 #Exercise 7.4 expand each class size by 5%
-#Perhaps this can be done with less code?
-students = students.map do |cohort, number| cohort, number = cohort, number * 1.05
-							cohort, number = cohort, number.to_i
+larger_classes = {}
+
+students.each do |cohort, number| 
+	number *= 1.05
+	number = number.to_i
+
+	larger_classes[cohort] = number
+
+	puts "#{cohort} has increased to #{number}"
 end
 
-display(students)
+
+
+#Exercise 7.5 delete the 2nd cohort and redisplay.
+larger_classes.delete(:cohort2)
+
+display(larger_classes)
+
+#Exercise 7.6 total number of students
+total_students = 0
+larger_classes.each do |cohort, number|
+	total_students += number 
+end
+
+puts "The total number of students is #{total_students}"
+
+
 
 
 
