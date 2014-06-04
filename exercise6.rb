@@ -15,6 +15,17 @@ end
 
 list(grocery_list)
 
+#Exercise 6.3 output number of items on the list
+puts grocery_list.length
 
+#Exercise 6.4 check if you need bananas
+if grocery_list.include?"bananas"
+	puts "You need to pick up bananas."
+else
+	puts "You don't need to pick up bananas today."
+end
+
+#Exercise 6.5 display the second item in your list
+puts grocery_list[1]
 
 
