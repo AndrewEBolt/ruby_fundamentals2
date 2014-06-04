@@ -28,4 +28,14 @@ end
 #Exercise 6.5 display the second item in your list
 puts grocery_list[1]
 
+#Exercise 6.6 Sort and output the grocery list
+grocery_list.sort!
+
+list(grocery_list)
+
+#Exercise 6.7 Remove salmon and output the grocery list
+grocery_list.delete("salmon")
+
+list(grocery_list)
+
 
